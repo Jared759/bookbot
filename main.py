@@ -13,6 +13,7 @@ def main():
     word_count = numwords(text)
     letter_count = numcharacters(text)  # This should return the letter frequency dictionary
     sorted_letters = sorted(letter_count)  # Pass the dictionary to sort()
+    print(word_count)
     print(sorted_letters)  # Print the sorted output
 main()
 
