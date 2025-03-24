@@ -1,6 +1,6 @@
 from stats import numwords
 from stats import numcharacters
-from stats import letter_count
+from stats import sort
 
 def get_book_text(path):
     with open(path) as f:
