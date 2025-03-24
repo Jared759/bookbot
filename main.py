@@ -1,5 +1,6 @@
 from stats import numwords
 from stats import numcharacters
+from stats import sort
 
 def get_book_text(path):
     with open(path) as f:
@@ -11,7 +12,7 @@ def main():
     text = get_book_text(path)
     word_count = numwords(text)
     letter_count = numcharacters(text)
-    print(letter_count)
+    print(sort)
 main()
 
 

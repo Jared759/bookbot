@@ -11,3 +11,15 @@ def numcharacters(path):
         else:
             dict[letter] = 1
     return dict
+
+def sort(dict):
+    char_list = []
+
+    for l, count in dict.items():
+
+        char_dict = {"letter": l, "count": count}
+
+        char_list.append(char_dict)
+
+        char_list.sort(key=lambda x: x["count"], reverse=True)
+    return char_list
