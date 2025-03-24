@@ -15,6 +15,8 @@ def numwords(path):
     return words
 
 def main():
+    path = "books/frankenstein.txt"
     text = get_book_text(path)
     word_count = numwords(text)
     print(f"{word_count} words found in this document")
+main()
