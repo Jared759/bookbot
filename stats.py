@@ -4,10 +4,9 @@ def numwords(path):
 
 def numcharacters(path):
     dict = {}
-    count = 0
     for i in path:
         letter = i.lower()
-        if i in dict:
+        if letter in dict:  # Check if the lowercase letter is in dict, not i
             dict[letter] += 1
         else:
             dict[letter] = 1
