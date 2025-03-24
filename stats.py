@@ -12,17 +12,14 @@ def numwords(path):
             #dict[letter] = 1
     #return dict
 
-def letter_count(dict):
+def letter_count(char_dict):
     char_list = []
+    
+    for char, count in char_dict.items():
+        char_list.append({"letter": char, "count": count})  # Convert to list of dictionaries
 
-    for l, count in dict.items():
-
-        char_dict = {"letter": l, "count": count}
-
-        char_list.append(char_dict)
-
-        char_list.sort(key=lambda x: x["count"], reverse=True)
-
+    # Sort in descending order by "count"
+    char_list.sort(key=lambda x: x["count"], reverse=True)
     return char_list
 
 def numcharacters(text):
@@ -33,3 +30,4 @@ def numcharacters(text):
             char_counts[char] = char_counts.get(char, 0) + 1  # Increment count
 
     return char_counts
+
