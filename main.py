@@ -14,7 +14,7 @@ def main():
     letter_count = numcharacters(text)  # This should return the letter frequency dictionary
     sorted_letters = sorted(letter_count)  # Pass the dictionary to sort()
     print(f"Found {word_count} total words.")
-    sorted_letters = sort(letter_count)
+    sorted_letters = sorted(letter_count)
     print(sorted_letters)
 main()
 
