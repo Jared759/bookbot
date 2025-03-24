@@ -11,7 +11,6 @@ def main():
     text = get_book_text(path)
     word_count = numwords(text)
     letter_count = numcharacters(text)
-    print(f"{word_count} words found in the document")
     print(letter_count)
 main()
 
