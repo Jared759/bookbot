@@ -1,6 +1,7 @@
 from stats import numwords
 from stats import numcharacters
 from stats import sort
+import sys
 
 def get_book_text(path):
     with open(path) as f:
@@ -8,7 +9,6 @@ def get_book_text(path):
         return file_contents
 
 def main():
-    path = "books/frankenstein.txt"
     text = get_book_text(path)
     word_count = numwords(text)
     letter_count = numcharacters(text)  # This should return the letter frequency dictionary
@@ -20,7 +20,12 @@ def main():
     print("--------- Character Count -------")
     for item in sorted_letters:  # Loop through the sorted list
         print(f"{item['letter']}: {item['count']}")
+
+    if len(sys.argv) != 2:
+        print(f"Usage: python3 main.py books/")
+        sys.exit(1)
     
+    book_path = sys.argv(1)
 main()
 
 
