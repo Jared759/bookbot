@@ -2,10 +2,13 @@ def numwords(path):
     words = len(path.split())
     return words
 
-def numletters(path):
+def numcharacters(path):
     dict = {}
     count = 0
     for i in path:
-        count += 1
-        dict =(f"{i}: {count}")
+        letter = i.lower()
+        if i in dict:
+            dict[letter] += 1
+        else:
+            dict[letter] = 1
     return dict
