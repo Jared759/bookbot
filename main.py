@@ -1,5 +1,5 @@
 from stats import numwords
-from stats import numletters
+from stats import numcharacters
 
 def get_book_text(path):
     with open(path) as f:
