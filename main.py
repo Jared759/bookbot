@@ -8,13 +8,22 @@ def get_book_text(path):
         return file_contents
 
 def main():
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
     path = "books/frankenstein.txt"
     text = get_book_text(path)
+
     word_count = numwords(text)
     letter_count = numcharacters(text)  # This should return the letter frequency dictionary
     sorted_letters = sort(letter_count)
-    print(f"Found {word_count} total words.")
-    print(sorted_letters)
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+    print("--------- Character Count -------")
+    for item in sorted_letters:  # Loop through the sorted list
+        print(f"{item['letter']}: {item['count']}")
+    
 main()
 
 
