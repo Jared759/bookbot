@@ -1,0 +1,7 @@
+def get_book("books/frankenstein.txt")
+with open(get_book) as f:
+        file_contents = f.read()
+        rewith open("books/frankenstein.txt") as f:
+	file_contents = f.read()
+	return file_contents
+
