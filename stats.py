@@ -12,7 +12,7 @@ def numcharacters(path):
             dict[letter] = 1
     return dict
 
-def sort(dict):
+def letter_count(dict):
     char_list = []
 
     for l, count in dict.items():
