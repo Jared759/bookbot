@@ -14,6 +14,9 @@ def main():
         sys.exit(1)
     
 book_path = sys.argv[1]
+
+with open(book_path, "r") as f:
+
 text = get_book_text(book_path)
 word_count = numwords(text)
 letter_count = numcharacters(text)  # This should return the letter frequency dictionary
